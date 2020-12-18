@@ -2,14 +2,12 @@
 """
 @Time      : 2020/12/16 15:19
 @Author    : William.sv@icloud.com
-@File      : wordParser.py
+@File      : docxParser.py
 @ Software : PyCharm
-@Desc      :
+@Desc      : 获取word文档内容及图片
 """
 
-from xml.dom.minidom import parse
 import xml.dom.minidom
-import shutil
 import zipfile
 import os
 import sys
