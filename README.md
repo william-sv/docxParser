@@ -1,6 +1,13 @@
 # docxParser
 解析docx文档，输出文章内容及图片（图片默认输出图片位置~）
 
+#### 方案
+
+1. 使用 zipfile 获取 docx文档中的 document.xml 数据
+2. 使用 xml.dom.minidom.parseString() 解析文档，取出docx文档中的段落内容
+3. 读取document.xml.rels 文件，匹配 图片资源的位置
+
+
 #### 用法
 
 ##### 获取word文档内容，包含文字及图片所在位置（图片以 {image1} 表示）
