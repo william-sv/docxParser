@@ -35,9 +35,9 @@ class DocxParser:
             document_xml_name = ''  # 段落文件
             document_xml_rels = ''  # media文件
             for i in file_list:
-                if 'document.xml' in i :
+                if i.endswith("document.xml") :
                     document_xml_name = i
-                if 'document.xml.rels' in i :
+                if i.endswith("document.xml.rels") : 
                     document_xml_rels = i
             with zip_file.open(document_xml_name, mode='r') as resource_document:
                 DOMTree = xml.dom.minidom.parseString(resource_document.read())
